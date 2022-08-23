@@ -1,5 +1,7 @@
+/* gcc te_tgetent.c -lcurses -ltermcap */
 #include <termcap.h>
 #include <string.h>
+#include <stdlib.h>
 #include "debug.h"
 
 int main(int argc, char *argv[])
