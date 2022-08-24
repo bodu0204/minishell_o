@@ -1,0 +1,1 @@
+[(te_ttyslot.c/25) main ]ttyslot():0
