@@ -39,12 +39,18 @@ typedef struct s_g
 	int	retn;
 }	t_g;
 
-typedef struct s_cmd
+typedef struct s_pid
 {
-	char	**cmd;
-	int		pipe[3];
-	int		n_type;
-	int		ps;
+	pid_t			p;
+	struct s_pid	*befor;
+}	t_pid;
+
+typedef struct s_cmd
+{	
+	char			**cmd;
+	int				pipe[3];
+	int				n_type;
+	struct s_pid	*ps;
 }	t_cmd;
 
 //bulitin
@@ -107,6 +113,9 @@ char	*asterisk(char *cl);
 //utils
 char	*cm_name(char *s);
 char	*skip_tk(char *cl);
+
+//sub_shell
+void	sub_shell(char *cl);
 
 //libft_plus
 int		ft_strcmp(const char *s1, const char *s2);

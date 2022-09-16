@@ -1,24 +1,22 @@
 #include "../minishell.h"
 #include "envcl.h"
+#include "../debug.h"
 
+size_t	ecl_std0(char	*cl);
 char	*ecl_std1(char	*cl, size_t	B, size_t i);
 char	*ecl_std2(char	*cl, size_t	B, size_t i);
 char	*ecl_std3(char	*cl, size_t	B, size_t i);
 char	*ecl_std4(char	*cl, size_t	B, size_t i);
 char	*ecl_std5(char	*cl, size_t	B, size_t i);
 char	*ecl_std6(char	*cl, size_t	B, size_t i);
+char	*ecl_std7(char	*cl, size_t	B, size_t i);
+char	*ecl_std8(void);
 
 char	*ecl_std(char	*cl, size_t	B)
 {
 	size_t	i;
 
-	i = 0;
-	while (cl[i] != ' ' && cl[i] != '<' && cl[i] != '>' \
-	&& cl[i] != '|' && cl[i] != ';' && ft_strncmp(cl + i, "&&", 2) \
-	&& cl[i] != '$' \
-	&& cl[i] != '\\' && cl[i] != '"' && cl[i] != '\'' \
-	&& cl[i])
-		i++;
+	i = ecl_std0(cl);
 	if (!cl[i])
 		return (ecl_std1(cl, B, i));
 	else if (cl[i] == ' ' || cl[i] == '<' || cl[i] == '>' \
@@ -30,9 +28,27 @@ char	*ecl_std(char	*cl, size_t	B)
 		return (ecl_std4(cl, B, i));
 	else if (cl[i] == '"')
 		return (ecl_std5(cl, B, i));
-	else
+	else if (cl[i] == '\'')
 		return (ecl_std6(cl, B, i));
+	else if (cl[i] == '(')
+		return (ecl_std7(cl, B, i));/* 未完 */
+	else //(cl[i] == ')') 構文エラー
+		return (ecl_std8());/* 未完 */
 	return (NULL);
+}
+
+size_t	ecl_std0(char	*cl)
+{
+	size_t	i;
+
+	i = 0;
+	while (cl[i] != ' ' && cl[i] != '<' && cl[i] != '>' \
+	&& cl[i] != '|' && cl[i] != ';' && ft_strncmp(cl + i, "&&", 2) \
+	&& cl[i] != '$' \
+	&& cl[i] != '\\' && cl[i] != '"' && cl[i] != '\'' && cl[i] != '(' && cl[i] != ')' \
+	&& cl[i])
+		i++;
+	return (i);
 }
 
 char	*ecl_std1(char	*cl, size_t	B, size_t i)

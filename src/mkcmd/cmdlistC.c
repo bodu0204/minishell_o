@@ -1,17 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   cmdlistC.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: blyu <blyu@student.42.fr>                  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 18:23:23 by blyu              #+#    #+#             */
-/*   Updated: 2022/09/11 03:12:23 by blyu             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "../minishell.h"
 #include "mkcmd.h"
+
+#include "../debug.h"
 
 char	**cmdlist6(t_cmd *c, char *cl, char **ncl, size_t ll)
 {
@@ -63,6 +54,37 @@ char	**cmdlist9(t_cmd *c, char *cl, char **ncl, size_t ll)
 	if (c->n_type != SKIP)
 		c->n_type = AND;
 	*ncl = cl;
+	return (r);
+}
+
+char	**cmdlist10(t_cmd *c, char *cl, char **ncl, size_t ll)
+{
+	char	**r;
+	char	*s;
+	size_t	l;
+
+	if (ll)
+	{
+		r = cmdlist(c, "", ncl, ll);
+		*ncl = cl;
+		return(r);
+	}
+TEST
+	l = tk_bralen(cl);
+	s = malloc(l + 1);
+	if (!s)
+		return (NULL);
+	ft_memcpy(s, cl, l);
+TEST
+	s[l] = '\0';
+	r = cmdlist(c, "", ncl, 1);
+	if (!r)
+	{
+		free(s);
+		return (NULL);
+	}
+	r[0] = s;
+	*ncl = cl + l;
 	return (r);
 }
 

@@ -10,7 +10,7 @@
 #define TESTx(i) printf("[(%s/%d) %s ]%s:%lx\n", __FILE__, __LINE__, __func__, #i, (unsigned long)(i)); fflush(stdin);
 #define TESTd(i) printf("[(%s/%d) %s ]%s:%lf\n", __FILE__, __LINE__, __func__, #i, (double)(i)); fflush(stdin);
 #define TESTp(i) printf("[(%s/%d) %s ]%s:%p\n", __FILE__, __LINE__, __func__, #i, (i)); fflush(stdin);
-#define TESTs(i) printf("[(%s/%d) %s ]%s:%s\n", __FILE__, __LINE__, __func__, #i, (char *)(i)); fflush(stdin);
+#define TESTs(i) printf("[(%s/%d) %s ]%s:%s<\n", __FILE__, __LINE__, __func__, #i, (char *)(i)); fflush(stdin);
 #define TIME printf("[(%s/%d) %s ]%lf[s]\n", __FILE__, __LINE__, __func__, time_diff()); fflush(stdin);
 #define STOP {char c; read(STDIN_FILENO, &c, sizeof(char));}
 

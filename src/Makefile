@@ -4,17 +4,17 @@ ASTERISK_SRCS	= 0_asterisk.c as_as_list.c as_as_q.c as_as_std.c as_stdA.c as_std
 
 BULITIN_SRCS	= bul_cd.c bul_echo.c bul_env.c bul_export.c bul_pwd.c bul_unset.c
 
-ENVCL_SRCS		= 0_envcl.c ecl_env_dq.c ecl_sp.c ecl_stdA.c ecl_dq.c ecl_env_std.c ecl_sq.c ecl_stdB.c extractenv.c
+ENVCL_SRCS		= 0_envcl.c ecl_bra.c ecl_env_dq.c ecl_sp.c ecl_stdA.c ecl_dq.c ecl_env_std.c ecl_sq.c ecl_stdB.c extractenv.c
 
 FIND_SRCS		= 0_find.c fi_dir.c fi_list.c fi_ok.c fi_std.c
 
 GETCl_SRCS		= 0_getcl_g.c gcl_dq.c gcl_nc.c gcl_sq.c gcl_stdA.c gcl_stdB.c
 
-MKCMD_SRCS		= 0_mkcmd.c cmdlistB.c tk_ques_g.c tk_stdA.c cmdlistA.c cmdlistC.c tk_dq.c tk_sq.c tk_stdB.c
+MKCMD_SRCS		= 0_mkcmd.c cmdlistB.c tk_ques_g.c tk_stdA.c cmdlistA.c cmdlistC.c tk_dq.c tk_sq.c tk_stdB.c tk_bralen.c
 
 LIBFT_PULUS		= ft_strcmp.c ft_strstr.c
 
-SRCS			= main.c exe_bulitin_g.c shell_loop.c toolB.c env.c exe_cmd_g.c get_txt.c utils.c exe_line_g.c toolA.c toolC.c
+SRCS			= main.c exe_bulitin_g.c shell_loop.c toolB.c env.c exe_cmd_g.c get_txt.c utils.c exe_line_g.c toolA.c toolC.c sub_shell.c
 ######################################################################################################################
 NAMEb			= minishell_bonus
 
@@ -22,17 +22,17 @@ ASTERISK_SRCSb	= 0_asterisk_bonus.c as_as_list_bonus.c as_as_q_bonus.c as_as_std
 
 BULITIN_SRCSb	= bul_cd_bonus.c bul_echo_bonus.c bul_env_bonus.c bul_export_bonus.c bul_pwd_bonus.c bul_unset_bonus.c
 
-ENVCL_SRCSb		= 0_envcl_bonus.c ecl_env_dq_bonus.c ecl_sp_bonus.c ecl_stdA_bonus.c ecl_dq_bonus.c ecl_env_std_bonus.c ecl_sq_bonus.c ecl_stdB_bonus.c extractenv_bonus.c
+ENVCL_SRCSb		= 0_envcl_bonus.c ecl_bra_bonus.c ecl_env_dq_bonus.c ecl_sp_bonus.c ecl_stdA_bonus.c ecl_dq_bonus.c ecl_env_std_bonus.c ecl_sq_bonus.c ecl_stdB_bonus.c extractenv_bonus.c
 
 FIND_SRCSb		= 0_find_bonus.c fi_dir_bonus.c fi_list_bonus.c fi_ok_bonus.c fi_std_bonus.c
 
 GETCl_SRCSb		= 0_getcl_g_bonus.c gcl_dq_bonus.c gcl_nc_bonus.c gcl_sq_bonus.c gcl_stdA_bonus.c gcl_stdB_bonus.c
 
-MKCMD_SRCSb		= 0_mkcmd_bonus.c cmdlistB_bonus.c tk_ques_g_bonus.c tk_stdA_bonus.c cmdlistA_bonus.c cmdlistC_bonus.c tk_dq_bonus.c tk_sq_bonus.c tk_stdB_bonus.c
+MKCMD_SRCSb		= 0_mkcmd_bonus.c cmdlistB_bonus.c tk_ques_g_bonus.c tk_stdA_bonus.c cmdlistA_bonus.c cmdlistC_bonus.c tk_dq_bonus.c tk_sq_bonus.c tk_stdB_bonus.c tk_bralen_bonus.c
 
 LIBFT_PULUSb	= ft_strcmp_bonus.c ft_strstr_bonus.c
 
-SRCSb			= main_bonus.c exe_bulitin_g_bonus.c shell_loop_bonus.c toolB_bonus.c env_bonus.c exe_cmd_g_bonus.c get_txt_bonus.c utils_bonus.c exe_line_g_bonus.c toolA_bonus.c  toolC_bonus.c
+SRCSb			= main_bonus.c exe_bulitin_g_bonus.c shell_loop_bonus.c toolB_bonus.c env_bonus.c exe_cmd_g_bonus.c get_txt_bonus.c utils_bonus.c exe_line_g_bonus.c toolA_bonus.c  toolC_bonus.c sub_shell_bonus.c
 
 
 LIBFT_dir		= libft/

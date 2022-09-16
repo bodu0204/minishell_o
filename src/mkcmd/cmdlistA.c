@@ -6,7 +6,7 @@
 /*   By: blyu <blyu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 18:23:12 by blyu              #+#    #+#             */
-/*   Updated: 2022/09/08 08:01:12 by blyu             ###   ########.fr       */
+/*   Updated: 2022/09/16 14:10:12 by blyu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	**cmdlist6(t_cmd *c, char *cl, char **ncl, size_t ll);
 char	**cmdlist7(t_cmd *c, char *cl, char **ncl, size_t ll);
 char	**cmdlist8(t_cmd *c, char *cl, char **ncl, size_t ll);
 char	**cmdlist9(t_cmd *c, char *cl, char **ncl, size_t ll);
+char	**cmdlist10(t_cmd *c, char *cl, char **ncl, size_t ll);
 char	**cmdlist0(t_cmd *c, char *cl, char **ncl, size_t ll);
 
 char	**cmdlist(t_cmd *c, char *cl, char **ncl, size_t ll)
@@ -46,6 +47,8 @@ char	**cmdlist(t_cmd *c, char *cl, char **ncl, size_t ll)
 		return (cmdlist8(c, cl, ncl, ll));
 	else if (!ft_strncmp(cl, "&& ", 3))
 		return (cmdlist9(c, cl, ncl, ll));
+	else if (*cl == '(')
+		return (cmdlist10(c, cl, ncl, ll));
 	else
 		return (cmdlist0(c, cl, ncl, ll));
 	return (NULL);
