@@ -44,7 +44,8 @@ size_t	ecl_std0(char	*cl)
 	while (cl[i] != ' ' && cl[i] != '<' && cl[i] != '>' \
 	&& cl[i] != '|' && cl[i] != ';' && ft_strncmp(cl + i, "&&", 2) \
 	&& cl[i] != '$' \
-	&& cl[i] != '\\' && cl[i] != '"' && cl[i] != '\'' && cl[i] != '(' && cl[i] != ')' \
+	&& cl[i] != '\\' && cl[i] != '"' && cl[i] != '\'' \
+	&& cl[i] != '(' && cl[i] != ')' \
 	&& cl[i])
 		i++;
 	return (i);

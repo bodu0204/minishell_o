@@ -8,7 +8,7 @@ void	sub_shell(char *cl)
 	cl = envcl(cl);
 	if (!cl)
 		return ;
- 	cl = asterisk(cl);
+	cl = asterisk(cl);
 	if (!cl)
 		return ;
 	exe_line(cl);

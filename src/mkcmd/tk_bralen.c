@@ -6,7 +6,7 @@ size_t	tk_bralen2(char *cl, char c);
 
 size_t	tk_bralen(char *cl)
 {
-	size_t	i;
+	size_t			i;
 	unsigned int	lv;
 
 	tk_bralen1(&i, &lv, *cl);

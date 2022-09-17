@@ -51,7 +51,7 @@ int	exe_cmd1(t_cmd *c, pid_t pid)
 			g_.exeret = WTERMSIG(g_.exeret) + 0x80;
 		else
 			g_.exeret = WEXITSTATUS(g_.exeret);
-		buf= c->ps;
+		buf = c->ps;
 		c->ps = c->ps->befor;
 		free(buf);
 	}

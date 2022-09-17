@@ -6,7 +6,7 @@ size_t	as_std_aslen2(char *cl, char c);
 
 size_t	as_std_aslen(char *cl)
 {
-	size_t	i;
+	size_t			i;
 	unsigned int	lv;
 
 	as_std_aslen1(&i, &lv, *cl);

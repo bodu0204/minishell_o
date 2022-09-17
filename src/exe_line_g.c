@@ -22,7 +22,7 @@ int	exe_line(char *cl)
 		cl = mkcmd(&c, cl);
 		if (c.n_type == SYNTAXERROR || !c.cmd[0])
 			return (cleanc(&c));
-	if (!cl || is_exit(&c))
+		if (!cl || is_exit(&c))
 			return (cleanc(&c) + 1);
 		i = exe_cmd(&c);
 		cleanc(&c);

@@ -1,4 +1,3 @@
-
 #include "../minishell.h"
 #include "mkcmd.h"
 
@@ -65,7 +64,7 @@ char	**cmdlist10(t_cmd *c, char *cl, char **ncl, size_t ll)
 	{
 		r = cmdlist(c, "", ncl, ll);
 		*ncl = cl;
-		return(r);
+		return (r);
 	}
 	l = tk_bralen(cl);
 	s = malloc(l + 1);

@@ -6,7 +6,7 @@ char	*ecl_bra2(char	*cl, size_t	B, size_t	i);
 
 char	*ecl_bra(char	*cl, size_t	B)
 {
-	size_t	i;
+	size_t			i;
 	unsigned int	lv;
 
 	i = 1;
@@ -19,9 +19,9 @@ char	*ecl_bra(char	*cl, size_t	B)
 			i += 2;
 		else
 		{
-			if(cl[i] == '(')
+			if (cl[i] == '(')
 				lv++;
-			else if(cl[i] == ')')
+			else if (cl[i] == ')')
 				lv--;
 			i++;
 		}
@@ -50,7 +50,7 @@ char	*ecl_bra2(char	*cl, size_t	B, size_t	i)
 
 	ii = 0;
 	while (cl[i + ii] == ' ')
-		ii++;	
+		ii++;
 	r = ecl_std(cl + i + ii, B + i + 1);
 	if (!r || !*r)
 		return (r);

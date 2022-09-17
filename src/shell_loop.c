@@ -13,7 +13,7 @@ void	shell_loop(void)
 		cl = envcl(cl);
 		if (!cl)
 			break ;
- 		cl = asterisk(cl);
+		cl = asterisk(cl);
 		if (!cl)
 			break ;
 		i = exe_line(cl);
