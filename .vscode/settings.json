@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "minishell.h": "c"
+        "minishell.h": "c",
+        "minishell_bonus.h": "c",
+        "envcl.h": "c",
+        "mkcmd.h": "c"
     }
 }
