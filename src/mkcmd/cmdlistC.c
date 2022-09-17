@@ -69,22 +69,19 @@ char	**cmdlist10(t_cmd *c, char *cl, char **ncl, size_t ll)
 		*ncl = cl;
 		return(r);
 	}
-TEST
 	l = tk_bralen(cl);
 	s = malloc(l + 1);
 	if (!s)
 		return (NULL);
 	ft_memcpy(s, cl, l);
-TEST
 	s[l] = '\0';
-	r = cmdlist(c, "", ncl, 1);
-	if (!r)
+	r = cmdlist(c, cl + l, ncl, 1);
+	if (!r || !*r)
 	{
 		free(s);
-		return (NULL);
+		return (r);
 	}
 	r[0] = s;
-	*ncl = cl + l;
 	return (r);
 }
 
@@ -98,10 +95,10 @@ char	**cmdlist0(t_cmd *c, char *cl, char **ncl, size_t ll)
 	if (!s)
 		return (NULL);
 	r = cmdlist(c, cl, ncl, ll + 1);
-	if (!r)
+	if (!r || !*r)
 	{
 		free(s);
-		return (NULL);
+		return (r);
 	}
 	r[ll] = s;
 	return (r);

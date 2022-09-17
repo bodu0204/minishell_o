@@ -1,9 +1,7 @@
 #include "minishell.h"
 
-#include "debug.h"
 void	sub_shell(char *cl)
 {
-TESTs(cl)
 	cl = ft_strdup(cl);
 	if (!cl)
 		return ;

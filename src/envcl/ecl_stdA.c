@@ -31,9 +31,9 @@ char	*ecl_std(char	*cl, size_t	B)
 	else if (cl[i] == '\'')
 		return (ecl_std6(cl, B, i));
 	else if (cl[i] == '(')
-		return (ecl_std7(cl, B, i));/* 未完 */
-	else //(cl[i] == ')') 構文エラー
-		return (ecl_std8());/* 未完 */
+		return (ecl_std7(cl, B, i));
+	else
+		return (ecl_std8());
 	return (NULL);
 }
 

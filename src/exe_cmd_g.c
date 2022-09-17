@@ -22,7 +22,6 @@ int	exe_cmd(t_cmd *c)
 		return (1);
 	else if (!*cm && c->cmd[0][0] != '(')
 	{
-TEST
 		free(cm);
 		g_.exeret = 127;
 		return (0);
