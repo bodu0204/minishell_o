@@ -1,6 +1,5 @@
 #include "../minishell.h"
 #include "envcl.h"
-#include "../debug.h"
 
 size_t	ecl_std0(char	*cl);
 char	*ecl_std1(char	*cl, size_t	B, size_t i);

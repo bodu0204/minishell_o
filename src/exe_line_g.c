@@ -1,5 +1,4 @@
 #include "minishell.h"
-#include "debug.h"
 
 extern t_g	g_;
 
@@ -23,18 +22,6 @@ int	exe_line(char *cl)
 		cl = mkcmd(&c, cl);
 		if (c.n_type == SYNTAXERROR || !c.cmd[0])
 			return (cleanc(&c));
-size_t	t = 0;
-while (c.cmd[t])
-{
-	TESTs(c.cmd[t])
-	t++;
-}
-TESTn(c.pipe[R_PIPE])
-TESTn(c.pipe[W_PIPE])
-TESTn(c.pipe[NEXT_PIPE])
-TESTn(c.n_type)
-TESTp(cl)
-TESTs(cl)
 	if (!cl || is_exit(&c))
 			return (cleanc(&c) + 1);
 		i = exe_cmd(&c);

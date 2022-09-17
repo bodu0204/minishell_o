@@ -1,6 +1,5 @@
 #include "../minishell.h"
 #include "asterisk.h"
-#include "../debug.h"
 
 void	as_std_aslen1(size_t *i, unsigned int *lv, char c);
 size_t	as_std_aslen2(char *cl, char c);

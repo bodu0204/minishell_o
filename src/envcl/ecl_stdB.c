@@ -1,6 +1,5 @@
 #include "../minishell.h"
 #include "envcl.h"
-#include "../debug.h"
 
 char	*ecl_std5(char	*cl, size_t	B, size_t i)
 {
