@@ -10,7 +10,7 @@ FIND_SRCS		= 0_find.c fi_dir.c fi_list.c fi_ok.c fi_std.c
 
 GETCl_SRCS		= 0_getcl_g.c gcl_dq.c gcl_nc.c gcl_sq.c gcl_stdA.c gcl_stdB.c
 
-MKCMD_SRCS		= 0_mkcmd.c cmdlistB.c tk_ques_g.c tk_stdA.c cmdlistA.c cmdlistC.c tk_dq.c tk_sq.c tk_stdB.c tk_bralen.c
+MKCMD_SRCS		= 0_mkcmd.c cmdlistB.c tk_ques_g.c tk_stdA.c cmdlistA.c cmdlistC.c tk_dq.c tk_sq.c tk_stdB.c tk_bralen.c cmdlistD.c
 
 LIBFT_PULUS		= ft_strcmp.c ft_strstr.c
 
@@ -28,7 +28,7 @@ FIND_SRCSb		= 0_find_bonus.c fi_dir_bonus.c fi_list_bonus.c fi_ok_bonus.c fi_std
 
 GETCl_SRCSb		= 0_getcl_g_bonus.c gcl_dq_bonus.c gcl_nc_bonus.c gcl_sq_bonus.c gcl_stdA_bonus.c gcl_stdB_bonus.c
 
-MKCMD_SRCSb		= 0_mkcmd_bonus.c cmdlistB_bonus.c tk_ques_g_bonus.c tk_stdA_bonus.c cmdlistA_bonus.c cmdlistC_bonus.c tk_dq_bonus.c tk_sq_bonus.c tk_stdB_bonus.c tk_bralen_bonus.c
+MKCMD_SRCSb		= 0_mkcmd_bonus.c cmdlistB_bonus.c tk_ques_g_bonus.c tk_stdA_bonus.c cmdlistA_bonus.c cmdlistC_bonus.c tk_dq_bonus.c tk_sq_bonus.c tk_stdB_bonus.c tk_bralen_bonus.c cmdlistD_bonus.c
 
 LIBFT_PULUSb	= ft_strcmp_bonus.c ft_strstr_bonus.c
 

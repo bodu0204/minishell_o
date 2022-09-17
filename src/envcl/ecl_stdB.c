@@ -1,6 +1,19 @@
 #include "../minishell.h"
 #include "envcl.h"
 
+char	*ecl_std4(char *cl, size_t B, size_t i)
+{
+	char	*r;
+
+	i += 2;
+	r = ecl_std(cl + i, B + i);
+	if (!r || !*r)
+		return (r);
+	if (i)
+		ft_memcpy(r + B, cl, i);
+	return (r);
+}
+
 char	*ecl_std5(char	*cl, size_t	B, size_t i)
 {
 	char	*r;
